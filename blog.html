@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>R7 Blog • Ramzan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ramzan: "#22c55e",
+              r7dark: "#020617",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-r7dark text-slate-100">
+    <!-- NAVBAR (same as index) -->
+    <header class="sticky top-0 z-40 border-b border-slate-800 bg-r7dark/80 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-full bg-ramzan/20 flex items-center justify-center text-ramzan font-bold">
+            R7
+          </div>
+          <div>
+            <p class="text-sm font-semibold tracking-tight">R7 Blog</p>
+            <p class="text-[11px] text-slate-400">Code • Growth • Life</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-5 text-sm">
+          <a href="index.html" class="hover:text-ramzan transition">Home</a>
+          <a href="blog.html" class="text-ramzan">Blog</a>
+          <a href="hashtags.html" class="hover:text-ramzan transition">Hashtag Box</a>
+          <a href="about.html" class="hover:text-ramzan transition">About</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuToggle"
+          class="md:hidden rounded-full border border-slate-700 bg-slate-900/70 p-2 text-slate-200"
+          aria-label="Menu"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav dropdown -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t border-slate-800 bg-r7dark/95 px-4 pb-3 pt-2 text-xs"
+      >
+        <div class="flex flex-col gap-2">
+          <button
+            type="button"
+            onclick="history.back()"
+            class="inline-flex items-center gap-1 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-[11px] text-slate-200"
+          >
+            ⬅ Back
+          </button>
+          <a href="index.html" class="py-1 text-slate-100">🏠 Home</a>
+          <a href="blog.html" class="py-1 text-slate-200">📚 Blog</a>
+          <a href="hashtags.html" class="py-1 text-slate-200">#️⃣ Hashtag Box</a>
+          <a href="about.html" class="py-1 text-slate-200">👤 About</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="border-b border-slate-800 bg-gradient-to-b from-slate-900 via-slate-950 to-r7dark">
+      <div class="max-w-6xl mx-auto px-4 py-8 grid gap-8 md:grid-cols-[1.6fr,1.2fr]">
+        <div class="space-y-4">
+          <p class="text-xs text-ramzan uppercase tracking-[0.3em]">Blog</p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            R7 Blog – jaha main apna <span class="text-ramzan">process</span> likhta hoon.
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300">
+            Yaha long form me likha hai: coding journey, routine, mindset, social
+            media experiments aur chhoti-chhoti life learnings. Thoda mazedaar,
+            thoda deep.
+          </p>
+          <a href="#latest"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-ramzan text-xs font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Read latest posts ↓
+          </a>
+        </div>
+
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-5 text-xs space-y-3">
+          <p class="text-sm font-semibold">What you’ll find here</p>
+          <ul class="text-slate-300 space-y-1">
+            <li>• Simple breakdown of HTML, CSS, Tailwind, JS, React</li>
+            <li>• R7 journal, habits, productivity, exam + code balance</li>
+            <li>• Reels, content, personal brand related soch-vichar</li>
+          </ul>
+          <p class="text-[11px] text-slate-500">
+            Note: Abhi static demo hai – tu chahe to is file me apne real blogs
+            ka text daal sakta hai.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+      <!-- Latest posts -->
+      <section id="latest" class="space-y-6">
+        <div class="flex items-end justify-between gap-3 border-b border-slate-800 pb-3">
+          <div>
+            <h2 class="text-lg font-semibold">Latest posts</h2>
+            <p class="text-xs text-slate-400">Fresh from dimag.</p>
+          </div>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[1.7fr,1.3fr]">
+          <!-- Featured -->
+          <article class="rounded-3xl border border-slate-800 bg-slate-900/70 p-5 space-y-3">
+            <p class="text-[11px] uppercase tracking-[0.3em] text-ramzan">Featured</p>
+            <h3 class="text-xl sm:text-2xl font-semibold">
+              7 hours padhna + coding karna bina burn out hue – R7 style
+            </h3>
+            <p class="text-sm text-slate-300">
+              All-or-nothing style chhod ke, thoda systematic way se kaam karne
+              ka attempt. Blocks, breaks, water, walk, aur phone discipline ka
+              mix. Is post me full breakdown hai.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1">
+              <li>• 50–90 min focus blocks + 10–15 min break</li>
+              <li>• “Phone box” + pre-decided scroll time</li>
+              <li>• Daily review: kya kiya, kya nahi hua, next kya</li>
+            </ul>
+            <div class="flex items-center justify-between pt-2 text-[11px] text-slate-400">
+              <span>By Ramzan • 9 min read</span>
+              <span>Nov 2025 • R7 Journal</span>
+            </div>
+          </article>
+
+          <!-- Small list -->
+          <div class="space-y-4 text-xs">
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-1">
+              <p class="text-[11px] text-ramzan/80 uppercase">Coding</p>
+              <h3 class="text-sm font-semibold">
+                Clean UI banane ka simple Tailwind formula
+              </h3>
+              <p class="text-slate-300">
+                Font sizes, spacing, colors aur shadow ka easy rule set jisse
+                koi bhi decent UI bana sakta hai.
+              </p>
+              <p class="text-[11px] text-slate-400">4 min read • Tailwind • Frontend</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-1">
+              <p class="text-[11px] text-ramzan/80 uppercase">Mindset</p>
+              <h3 class="text-sm font-semibold">
+                “Main piche reh gaya” wali feeling ko handle kaise karun?
+              </h3>
+              <p class="text-slate-300">
+                Jab dusre log insta par aage lagte hain – tab dimaag ke andar
+                kya chal raha hota hai, aur kaise control karein.
+              </p>
+              <p class="text-[11px] text-slate-400">7 min read • Personal</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-1">
+              <p class="text-[11px] text-ramzan/80 uppercase">Content</p>
+              <h3 class="text-sm font-semibold">
+                30 Days Reel Challenge – introvert friendly idea list
+              </h3>
+              <p class="text-slate-300">
+                Camera shy ho, phir bhi reels dalna chahte ho? Isme aise ideas
+                hain jaha face bhi zaroori nahi.
+              </p>
+              <p class="text-[11px] text-slate-400">5 min read • Content</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="space-y-4 border-t border-slate-800 pt-6">
+        <h2 class="text-lg font-semibold">Browse by category</h2>
+        <div class="grid gap-4 md:grid-cols-3 text-xs">
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+            <p class="font-semibold text-sm mb-1">Code & Tech</p>
+            <p class="text-slate-300">
+              HTML, CSS, Tailwind, React, backend basics – sab easy language me.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+            <p class="font-semibold text-sm mb-1">Mindset & Discipline</p>
+            <p class="text-slate-300">
+              R7 Journal, routines, focus, habits, breakups ke baad ka scene 🤝
+            </p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+            <p class="font-semibold text-sm mb-1">Social Media & Brand</p>
+            <p class="text-slate-300">
+              Reels ideas, captions, simple content plan jo tu follow kar sake.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 py-4">
+      <div class="max-w-6xl mx-auto px-4 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>© <span id="year"></span> R7 Blog • Static demo.</p>
+        <p>
+          <a href="index.html" class="text-ramzan">← Home</a> •
+          <a href="hashtags.html" class="text-ramzan">Hashtag Box</a> •
+          <a href="about.html" class="text-ramzan">About</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>

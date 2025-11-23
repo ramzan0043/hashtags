@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ramzan Hashtag Box • BIG Version</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ramzan: "#22c55e",
+              r7dark: "#020617",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-r7dark text-slate-100">
+    <!-- ================= NAVBAR ================= -->
+    <header
+      class="sticky top-0 z-40 border-b border-slate-800 bg-r7dark/80 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3"
+      >
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <div
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-ramzan/20 text-lg font-bold text-ramzan"
+          >
+            #
+          </div>
+          <div>
+            <p class="text-sm font-semibold tracking-tight">
+              Ramzan Hashtag Box • BIG
+            </p>
+            <p class="text-[11px] text-slate-400">
+              Instagram • Facebook • YouTube • Reels • Posts • Stories
+            </p>
+          </div>
+        </div>
+
+        <!-- Desktop nav: site pages -->
+        <nav class="hidden items-center gap-5 text-sm text-slate-300 md:flex">
+          <a href="index.html" class="hover:text-ramzan transition">Home</a>
+          <a href="blog.html" class="hover:text-ramzan transition">Blog</a>
+          <a href="hashtags.html" class="text-ramzan transition">Hashtag Box</a>
+          <a href="about.html" class="hover:text-ramzan transition">About</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuToggle"
+          class="md:hidden rounded-full border border-slate-700 bg-slate-900/70 p-2 text-slate-200"
+          aria-label="Menu"
+        >
+          <!-- 3-line icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav dropdown -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t border-slate-800 bg-r7dark/95 px-4 pb-3 pt-2 text-xs"
+      >
+        <div class="flex flex-col gap-2">
+          <button
+            type="button"
+            onclick="history.back()"
+            class="inline-flex items-center gap-1 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-[11px] text-slate-200"
+          >
+            ⬅ Back
+          </button>
+          <a href="index.html" class="py-1 text-slate-100">🏠 Home</a>
+          <a href="blog.html" class="py-1 text-slate-200">📚 Blog</a>
+          <a href="hashtags.html" class="py-1 text-ramzan">#️⃣ Hashtag Box</a>
+          <a href="about.html" class="py-1 text-slate-200">👤 About</a>
+          <div class="h-px bg-slate-800 my-1"></div>
+          <a href="#hero" class="py-1 text-slate-300">• Top / Hero</a>
+          <a href="#search" class="py-1 text-slate-300">• Search</a>
+          <a href="#all" class="py-1 text-slate-300">• All hashtag sets</a>
+          <a href="#tips" class="py-1 text-slate-300">• Tips</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section
+      id="hero"
+      class="border-b border-slate-800 bg-gradient-to-b from-slate-900/50 to-r7dark"
+    >
+      <div
+        class="mx-auto max-w-6xl px-4 py-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+      >
+        <div class="space-y-4 max-w-xl">
+          <p class="inline-flex items-center gap-2 text-xs text-slate-400">
+            ⚡
+            <span
+              class="rounded-full border border-ramzan/40 bg-ramzan/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-ramzan"
+              >Ramzan Trending Hashtag Hub</span
+            >
+          </p>
+          <h1 class="text-3xl font-bold leading-tight sm:text-4xl">
+            Ek hi page par
+            <span class="text-ramzan">bohot saare ready-made hashtags</span>.
+          </h1>
+          <p class="text-sm text-slate-300 sm:text-base">
+            Instagram Reels, Posts, Stories, Facebook content, YouTube videos
+            & shorts – sab ke liye hashtags. Filter, search, copy aur paste.
+            Zero dimaag, full speed posting 😎
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Platform filter – Insta / FB / YouTube</li>
+            <li>• Content type – Reels / Posts / Stories / Shorts</li>
+            <li>• Keyword search – love, coding, travel, gym, sad, etc.</li>
+          </ul>
+
+          <!-- inner section nav -->
+          <div class="flex flex-wrap gap-2 text-[11px] pt-1">
+            <a href="#search" class="px-3 py-1 rounded-full border border-slate-700 hover:border-ramzan hover:text-ramzan transition">
+              🔍 Go to Search
+            </a>
+            <a href="#all" class="px-3 py-1 rounded-full border border-slate-700 hover:border-ramzan hover:text-ramzan transition">
+              📂 All Hashtag Sets
+            </a>
+            <a href="#tips" class="px-3 py-1 rounded-full border border-slate-700 hover:border-ramzan hover:text-ramzan transition">
+              💡 Tips
+            </a>
+          </div>
+
+          <a
+            href="#search"
+            class="inline-flex items-center gap-2 rounded-xl bg-ramzan px-4 py-2 text-xs font-semibold text-r7dark hover:bg-emerald-400 transition mt-1"
+          >
+            Scroll down & search hashtags
+            <span>↓</span>
+          </a>
+        </div>
+
+        <div
+          class="mt-4 grid flex-1 gap-3 rounded-3xl border border-slate-800 bg-slate-900/60 p-4 text-[11px] text-slate-300 md:mt-0"
+        >
+          <div class="flex items-center justify-between">
+            <p class="font-semibold text-slate-100">
+              Example: Insta Reels • Trend Mix
+            </p>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Multi-niche set</span
+            >
+          </div>
+          <p class="text-xs text-slate-300">
+            #foryou #foryoupage #explore #trendingreels #viralreels
+            #reelsindia #reelitfeelit #indianreels #dailyreels #instagood
+            #reelsvideo #trendingnow #discover
+          </p>
+          <p class="text-[10px] text-slate-500">
+            Neeche is type ke bohot saare bundles – coding, love, study, gym,
+            fashion, travel, meme, business, food, pets, kids, quotes, sad,
+            Islamic, spiritual, vlog… sab.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEARCH BAR ================= -->
+    <section
+      id="search"
+      class="border-b border-slate-800 bg-slate-950/60 py-6"
+    >
+      <div class="mx-auto max-w-6xl px-4 space-y-4">
+        <div class="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 class="text-lg font-semibold">
+              Filter + search karo, fir copy button dabao
+            </h2>
+            <p class="text-xs text-slate-400">
+              Platform + content type + keyword combination use karo.
+            </p>
+          </div>
+          <p
+            id="resultCount"
+            class="text-[11px] text-slate-400"
+          >
+            Showing all hashtag sets
+          </p>
+        </div>
+
+        <div
+          class="grid gap-3 md:grid-cols-[1.1fr,1.1fr,1.4fr] text-xs items-center"
+        >
+          <!-- Platform -->
+          <div class="space-y-1">
+            <label class="block text-slate-300">Platform</label>
+            <select
+              id="platformFilter"
+              class="w-full rounded-xl border border-slate-700 bg-slate-950/80 px-3 py-2 outline-none focus:border-ramzan"
+            >
+              <option value="all">All platforms</option>
+              <option value="instagram">Instagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="youtube">YouTube</option>
+            </select>
+          </div>
+
+          <!-- Type -->
+          <div class="space-y-1">
+            <label class="block text-slate-300">Content type</label>
+            <select
+              id="typeFilter"
+              class="w-full rounded-xl border border-slate-700 bg-slate-950/80 px-3 py-2 outline-none focus:border-ramzan"
+            >
+              <option value="all">All types</option>
+              <option value="reels">Reels / Shorts</option>
+              <option value="post">Feed Post / Thumbnail / Video</option>
+              <option value="story">Story / Status / Live</option>
+            </select>
+          </div>
+
+          <!-- Keyword search -->
+          <div class="space-y-1">
+            <label class="block text-slate-300">Search by keyword</label>
+            <input
+              id="keywordSearch"
+              type="text"
+              placeholder="Example: love, coding, travel, gym, sad, quotes, meme..."
+              class="w-full rounded-xl border border-slate-700 bg-slate-950/80 px-3 py-2 text-xs outline-none focus:border-ramzan"
+            />
+          </div>
+        </div>
+
+        <!-- QUICK KEYWORDS + RESET -->
+        <div class="flex flex-wrap items-center gap-2 text-[11px] mt-1">
+          <span class="text-slate-400 mr-1">Quick keywords:</span>
+
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="trending">
+            #trending
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="love">
+            #love
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="attitude">
+            #attitude
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="study">
+            #study
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="gym">
+            #gym
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="travel">
+            #travel
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="business">
+            #business
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="meme">
+            #meme
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="islamic">
+            #islamic
+          </button>
+          <button class="quick-keyword px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 hover:border-ramzan hover:text-ramzan transition" data-keyword="vlog">
+            #vlog
+          </button>
+
+          <button
+            id="clearFilters"
+            class="ml-auto px-3 py-1 rounded-full border border-slate-700 bg-slate-900/70 text-slate-300 hover:border-red-500 hover:text-red-400 transition"
+          >
+            Reset filters ✖
+          </button>
+        </div>
+
+        <p class="text-[11px] text-slate-500">
+          Tip: Hashtag card ke andar bhi keyword hota hai – jaise “gym”,
+          “fashion”, “islamic”, “kid”, “pet”, “meme” etc.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= HASHTAG GRID ================= -->
+    <main
+      id="all"
+      class="mx-auto max-w-6xl px-4 py-8 space-y-6"
+    >
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 class="text-lg font-semibold">All hashtag collections</h2>
+        <p class="text-[11px] text-slate-500">
+          Har card ke niche “Copy hashtags” button hai – click → clipboard.
+        </p>
+      </div>
+
+      <!-- GRID -->
+      <div
+        id="hashtagGrid"
+        class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <!-- ========= INSTAGRAM SETS ========= -->
+         
+        <!-- Insta Reels – POV / Attitude (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="attitude pov savage dialogue status boys girls"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                POV / Attitude / Savage lines
+              </h3>
+            </div>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Attitude</span
+            >
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            POV, savage reply, attitude shots ke liye perfect.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #attitude #attitudestatus #pov #povreels #savage #dialogue #hindidialogue
+            #killerlook #boysattitude #girlsattitude #badass #reelsstatus
+            #royalattitude #dontcare
+          </p>
+          <button
+            class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition"
+          >
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Travel / City (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="travel city cafe roadtrip mountains beach vlog"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Travel / City / Cafe aesthetics
+              </h3>
+            </div>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Travel</span
+            >
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            City walk, village trip, cafe vlog, mountains / beach reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #travel #travelreels #indiatravel #cityvibes #villagevibes #roadtrip
+            #mountainlife #beachvibes #cafevibes #wanderlust #travelvlog
+            #exploreindia #travelindia
+          </p>
+          <button
+            class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition"
+          >
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Business / Money (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="business money hustle startup marketing earning online"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Business / Money / Hustle reels
+              </h3>
+            </div>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Business</span
+            >
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Earning tips, side hustle, business gyaan, finance reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #business #money #hustle #sidehustle #startupindia #entrepreneur
+            #indianbusiness #onlineearning #finance #moneymindset #richmindset
+            #successreels #businessreels
+          </p>
+          <button
+            class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition"
+          >
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Couple / Relationship (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="couple relationship love romantic trend"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Couple / Relationship trending reels
+              </h3>
+            </div>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Couple</span
+            >
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Couple trends, POV relationship, soft / cute reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #couple #relationship #couplereels #couplegoals #cutecouple #lovebirds
+            #trendingcouple #hindilove #relationshipgoals #romanticreels
+            #lovestory #reelstrend
+          </p>
+          <button
+            class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition"
+          >
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- YouTube Shorts – Viral Trending Mix (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="reels"
+          data-tags="shorts trending viral india ytshorts explore"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Shorts
+              </p>
+              <h3 class="text-sm font-semibold">
+                Viral / Trending shorts (India)
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Trending
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Any niche ke YouTube shorts – generic viral mix.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #shorts #youtubeshorts #trending #viralshorts #ytshortsindia #shortsvideo
+            #indianyoutuber #explore #foryou #dailyshorts #trendingshorts #newvideo
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- YouTube Shorts – Roast / Commentary (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="reels"
+          data-tags="roast commentary opinion reaction hindi"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Shorts
+              </p>
+              <h3 class="text-sm font-semibold">
+                Roast / Commentary / Reaction shorts
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Commentary
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Reaction, opinion, commentary style Hindi shorts ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #roast #commentary #reaction #reactionvideo #hindireaction
+            #funnyreaction #opinion #youtubeshorts #shortsindia #desiyoutuber
+            #commentarychannel
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- YouTube – Tech Reviews / Unboxing (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="post"
+          data-tags="tech review unboxing smartphone laptop gadget hindi"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Video
+              </p>
+              <h3 class="text-sm font-semibold">
+                Tech review / Unboxing Hindi
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Review
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Smartphone, laptop, gadget review / unboxing videos ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #techreview #unboxing #hinditech #smartphonereview #gadgetreview
+            #laptopreview #indiangadget #techyoutuber #newphone #unboxingvideo
+            #youtubereview
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Trending India Mix (NEW) -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="trending viral explore india hindi reelsindian reelitfeelit fyp"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Trending / Explore page (India)
+              </h3>
+            </div>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Explore</span
+            >
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Har type ke viral reels ke liye safe trending mix (India).
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #trending #trendingreels #viral #viralreels #reelsindia #reelitfeelit
+            #explorepage #exploremore #foryoupage #hindireels #indianreels
+            #dailyreels #trend #instareels
+          </p>
+          <button
+            class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition"
+          >
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- ================== OLD SETS BELOW ================== -->
+
+        <!-- Insta Reels – Coding -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="coding code programmer developer javascript js webdev frontend india study tech"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Coding / Programming (Indian student)
+              </h3>
+            </div>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Tech • Study</span
+            >
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Study + coding + Indian creator mix – daily reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #coding #code #programmer #developer #javascript #webdevelopment
+            #html #css #reactjs #frontend #indiancoder #coderlife #studentlife
+            #engineering #programmingmemes #learncoding #techreels #dailyreels
+          </p>
+          <button
+            class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition"
+          >
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Love / Friendship -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="love romantic relationship couple friends bestie shayari feeling emotion"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Love / Friendship (Hindi emotion)
+              </h3>
+            </div>
+            <span
+              class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300"
+              >Love • Emotion</span
+            >
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Romantic, dosti, emotion based reels ke liye mix.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #love #lovestatus #hindishayari #dilse #feelings #relationship
+            #couplegoals #attitudestatus #dost #friendshipgoals #sadstatus
+            #brokenheart #hindireels #trendingreels #viralreels #bollywoodsongs
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Post – Quotes / Motivation -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="post"
+          data-tags="quotes motivation success discipline mindset hindi english life"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Quotes / Motivation (Hinglish)
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Quotes
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Quote page aur motivational posts ke liye safe bundle.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #motivation #success #discipline #selfimprovement #grind #hustle
+            #mindset #hardwork #hindiquotes #englishquotes #realitycheck
+            #lifelessons #quotestagram #quotesoftheday #inspirationdaily
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Story – Daily life aesthetic -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="story"
+          data-tags="story daily vlog routine life updates morning night aesthetic"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Story
+              </p>
+              <h3 class="text-sm font-semibold">
+                Daily life / Aesthetic vibes
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Story
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Daily routine, chai, sky, desk pics ke liye story tags.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #instastory #dailystory #vibes #aesthetic #today #mood #lifediary
+            #morningvibes #nightvibes #studydesk #chai #indiangirl #indianboy
+            #simplelife #relatable
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Study / Students -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="study exam student notes topper college school library focus"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Study / Exam motivation (India)
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Study
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Exam, notes, late night study reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #study #studymotivation #examprep #studentlife #boardexams
+            #collegelife #studynotes #librarylife #indiastudent #latenightstudy
+            #productivestudent #focusmode #noexcuses
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Gym / Fitness -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="gym fitness workout health bodybuilding transformation"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Gym / Fitness transformation
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Fitness
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Workout clips, progress reel, gym flex ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #gym #fitness #workout #fitindia #transformation #fitnessjourney
+            #bodybuilding #strength #fitlife #healthylifestyle #gymmotivation
+            #noexcuses #gymreels #indianfitness
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Post – Fashion / OOTD -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="post"
+          data-tags="fashion outfit ootd style boys girls dress kurta streetwear"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Fashion / OOTD (boys + girls)
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Fashion
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Outfit pics, mirror selfies, kurta / street style posts ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #fashion #ootd #outfitoftheday #style #streetstyle #indiangirl
+            #indianboy #desilook #kurta #instafashion #trendystyle #lookgood
+            #selfie #mirrorpic
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Dance -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="dance choreography bollywood hiphop challenge"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Dance / Choreography reels
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Dance
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Dance cover, trend songs, hook step reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #dance #dancer #dancecover #reelsdance #bollywooddance #hiphop
+            #dancechallenge #choreography #indianDancer #trendingdance
+            #reelitfeelit #dancevideo
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Meme / Funny -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="meme funny comedy relatable desi jokes"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Meme / Funny / Relatable reels
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Meme
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            POV, jokes, desi meme style reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #memes #funnymemes #relatable #desimemes #memeindia #reelsfunny
+            #comedyreels #pov #hindimemes #dailyfunny #laugh #lol
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Post – Food -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="post"
+          data-tags="food foodie breakfast lunch dinner streetfood cooking"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Food pics / Street food / Cooking
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Food
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Ghar ka khana, chai, street food, cooking reels / posts ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #food #foodie #foodlover #streetfood #homecooking #tasty #yummy
+            #foodstagram #chai #breakfast #lunch #dinner #desifood
+            #indianfood #foodphotography
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Islamic / Spiritual -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="islam islamic deen allah quran hadith dua jannah"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Islamic reminder / Deen content
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Deen
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Quran ayat, reminders, nasheed, Islamic reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #islam #islamic #deen #allah #quran #hadith #sunnah #muslim
+            #alhamdulillah #subhanallah #astagfirullah #islamicreminder
+            #jannah #dawah #ummah
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Reels – Sad / Heartbreak -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="reels"
+          data-tags="sad breakup heartbroken alone pain feel cry"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Reels
+              </p>
+              <h3 class="text-sm font-semibold">
+                Sad / Heartbreak Hindi reels
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Sad
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Sad songs, heartbreak, POV sad reels ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #sad #sadstatus #heartbroken #brokenheart #alone #dard #feelit
+            #hindisad #emotional #pain #shayari #tearsofface #diltoota
+            #sadreels
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Post – Pets / Dogs / Cats -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="post"
+          data-tags="pet dog cat animals cute puppy kitten"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Pets / Dogs / Cats content
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Pets
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Pet pics, cute videos, adoption page posts ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #pets #dog #cat #puppy #kitten #petstagram #dogsofinstagram
+            #catsofinstagram #cutepets #petlover #animalsofinstagram
+            #fluffy #petreels
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Insta Post – Kids / Family moments -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="instagram"
+          data-type="post"
+          data-tags="kids baby cute child parents family"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-ramzan/80">
+                Instagram • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Kids / Baby / Family moments
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Kids
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Baby pics, kids dance, family cute moments ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #baby #kids #cutekids #babylove #familymoments #parenting
+            #momlife #dadlife #littleone #childhood #familyfirst
+            #kidsofinstagram #cutenessoverload
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- ========= FACEBOOK SETS ========= -->
+
+        <!-- Facebook Post – Family / Festival -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="facebook"
+          data-type="post"
+          data-tags="family festival india diwali eid holi celebration relatives"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-blue-400/80">
+                Facebook • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Family / Festival celebrations
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Family
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Festival pics, family gathering, village visits ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #familytime #festivalseason #diwali #eid #holi #celebration
+            #indianfamily #cousins #villagevibes #tradition #togetherness
+            #memories #facebookpost #happytime
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Facebook Story – Quotes / Status -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="facebook"
+          data-type="story"
+          data-tags="status fbstory quotes life attitude feel"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-blue-400/80">
+                Facebook • Story / Status
+              </p>
+              <h3 class="text-sm font-semibold">
+                Status / Quotes (Hindi + English)
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Status
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            FB story / WhatsApp status style quotes / lines.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #status #fbstatus #whatsappstatus #hindistatus #attitude
+            #realstory #lifequotes #deepquotes #sadquotes #motivationalstatus
+            #shortstatus #oneliner #relatable
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Facebook Post – Local business / shop -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="facebook"
+          data-type="post"
+          data-tags="business shop local marketing product service smallbusiness"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-blue-400/80">
+                Facebook • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Local business / shop promotion
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Business
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Electrician, salon, clothing shop, coaching – sab ke liye general.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #business #smallbusiness #localbusiness #supportlocal #services
+            #indianbusiness #shopnow #offer #deal #qualitywork #trust
+            #customerfirst #facebookmarketing #brandbuilding
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Facebook Story – Study / Result -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="facebook"
+          data-type="story"
+          data-tags="exam result marks boardupsc school college proud"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-blue-400/80">
+                Facebook • Story
+              </p>
+              <h3 class="text-sm font-semibold">
+                Exam result / Proud parents
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Study
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Result screenshot, marks, admission update ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #resultday #examresult #proudmoment #marks #topper #parentslove
+            #blessings #hardworkpaysoff #studentlife #boardresult #collegeadmission
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- Facebook Post – Village / Nature -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="facebook"
+          data-type="post"
+          data-tags="village khet nature gaon tractor fields"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-blue-400/80">
+                Facebook • Post
+              </p>
+              <h3 class="text-sm font-semibold">
+                Village / Khet / Nature pics
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Village
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Khet, tractor, gaon ki road, sunset etc. ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #village #gaon #khet #farmlife #greenvibes #tractor #ruralindia
+            #villagelife #simplelife #naturelove #desi #gaonwalaladka
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- FB Story – Mood / Photo -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="facebook"
+          data-type="story"
+          data-tags="mood selfie randomday bored chill"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-blue-400/80">
+                Facebook • Story
+              </p>
+              <h3 class="text-sm font-semibold">
+                Mood / Random day status
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Mood
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Random selfie, bored, chill, thoughts ke liye simple hashtags.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #mood #random #selfie #justchilling #today #life #realvibes
+            #nodayoff #thoughts #smallthings #simplejoys
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- ========= YOUTUBE SETS ========= -->
+
+        <!-- YouTube – Coding / Tech -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="post"
+          data-tags="youtube coding tutorial tech webdev hindi"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Video
+              </p>
+              <h3 class="text-sm font-semibold">
+                Coding tutorial / Tech channel
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Tech
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            YouTube coding / tutorial videos ke liye safe set.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #codingtutorial #javascript #webdevelopment #reactjs #programming
+            #hinditech #youtubecreator #indiandeveloper #frontenddeveloper
+            #learncoding #codewithme #techchannel #youtubetutorial
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- YouTube Shorts – Meme / Funny -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="reels"
+          data-tags="shorts fun meme comedy india"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Shorts
+              </p>
+              <h3 class="text-sm font-semibold">
+                Funny / Meme / Relatable shorts
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Comedy
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Reaction, meme, comedy style short videos ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #shorts #youtubeshorts #funny #memes #relatable #indianmemes
+            #comedyvideo #trending #viralshorts #dailyshorts #funnymoments
+            #desimemes #laugh
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- YouTube – Study / Productivity -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="post"
+          data-tags="study productivity pomodoro notes exams focus"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Video
+              </p>
+              <h3 class="text-sm font-semibold">
+                Study with me / Productivity
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Study
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Study vlog, pomodoro, time-lapse study videos ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #studywithme #productivity #studyvlog #indiastudent #examtime
+            #pomodoro #timelapse #focusstudy #desksetup #stationery
+            #studentmotivation #studyhacks
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- YouTube – Vlog / Daily life -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="post"
+          data-tags="vlog dayinmylife daily blog indianvlogger"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Video
+              </p>
+              <h3 class="text-sm font-semibold">
+                Daily vlog / Day in my life
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Vlog
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Daily routine vlog, hostel life, village/city vlog ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #vlog #dailyvlog #dayinmylife #indiavlogger #hostellife #collegelife
+            #villagevlog #cityvlog #reallife #simplevlog #youtubervlog
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+
+        <!-- YouTube Shorts – Motivation / Gym -->
+        <article
+          class="hashtag-card flex flex-col gap-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs"
+          data-platform="youtube"
+          data-type="reels"
+          data-tags="shorts motivation gym mindset focus"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[11px] uppercase text-red-400/80">
+                YouTube • Shorts
+              </p>
+              <h3 class="text-sm font-semibold">
+                Motivation + Gym shorts combo
+              </h3>
+            </div>
+            <span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px]">
+              Motivational
+            </span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-300">
+            Short motivational lines + gym clips shorts ke liye.
+          </p>
+          <p class="hashtags text-[11px] text-slate-200 break-words">
+            #shorts #motivation #gymshorts #discipline #noexcuses #mindset
+            #grindmode #focus #shortvideo #motivationalshorts
+          </p>
+          <button class="copy-btn mt-2 w-full rounded-xl bg-ramzan py-1.5 
+                         text-[11px] font-semibold text-r7dark hover:bg-emerald-400 transition">
+            Copy hashtags
+          </button>
+        </article>
+      </div>
+    </main>
+
+    <!-- ================= TIPS SECTION ================= -->
+    <section
+      id="tips"
+      class="border-t border-slate-800 bg-slate-950/60 py-8 mt-2"
+    >
+      <div class="mx-auto max-w-6xl px-4 space-y-4 text-xs">
+        <h2 class="text-lg font-semibold">Hashtag tips (short & useful)</h2>
+        <div class="grid gap-4 md:grid-cols-3">
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2"
+          >
+            <p class="font-semibold text-sm">1. Mix big + niche tags</p>
+            <p class="text-slate-300">
+              Hamesha mix rakho: kuch bohot common (#love, #reels), kuch
+              niche (#indiancoder, #villagevlog). Iss page me dono mix hai.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2"
+          >
+            <p class="font-semibold text-sm">2. 10–20 enough hota hai</p>
+            <p class="text-slate-300">
+              Har post pe 25–30 se zyada hashtags mat daalna. 10–20 strong
+              hashtags ka set zyada clean lagta hai.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2"
+          >
+            <p class="font-semibold text-sm">3. Copy → Thoda edit bhi karo</p>
+            <p class="text-slate-300">
+              Direct copy+paste theek hai, lekin agar tum 1–2 extra tags
+              add/replace karoge jo bilkul tumhari post ke hisaab se ho,
+              to reach aur relevant ho jata hai.
+            </p>
+          </div>
+        </div>
+        <p class="text-[11px] text-slate-500">
+          Tu chahe to is file me aur bhi cards add kar sakta hai: bas ek
+          <code>&lt;article class="hashtag-card" ...&gt;</code> copy karke niche
+          paste kar, data-platform / data-type / data-tags aur text change kar de.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-slate-800 py-4">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-[11px] text-slate-500 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p>
+          © <span id="year"></span> Ramzan Hashtag Box • Big static version.
+        </p>
+        <p>
+          <a href="index.html" class="text-ramzan">Home</a> •
+          <a href="blog.html" class="text-ramzan">Blog</a> •
+          <a href="about.html" class="text-ramzan">About</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================= JS: FILTER + COPY ================= -->
+    <script>
+      const platformFilter = document.getElementById("platformFilter");
+      const typeFilter = document.getElementById("typeFilter");
+      const keywordSearch = document.getElementById("keywordSearch");
+      const cards = Array.from(document.querySelectorAll(".hashtag-card"));
+      const resultCount = document.getElementById("resultCount");
+      const quickKeywordButtons = document.querySelectorAll(".quick-keyword");
+      const clearFiltersBtn = document.getElementById("clearFilters");
+
+      function applyFilters() {
+        const platform = platformFilter.value;
+        const type = typeFilter.value;
+        const keyword = keywordSearch.value.toLowerCase().trim();
+
+        let visible = 0;
+
+        cards.forEach((card) => {
+          const cardPlatform = card.dataset.platform;
+          const cardType = card.dataset.type;
+          const tags = card.dataset.tags.toLowerCase();
+          const text = card.innerText.toLowerCase();
+
+          let ok = true;
+
+          if (platform !== "all" && cardPlatform !== platform) ok = false;
+          if (type !== "all" && cardType !== type) ok = false;
+          if (keyword && !tags.includes(keyword) && !text.includes(keyword))
+            ok = false;
+
+          if (ok) {
+            card.classList.remove("hidden");
+            visible++;
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+
+        if (visible === cards.length) {
+          resultCount.textContent = "Showing all hashtag sets";
+        } else if (visible === 0) {
+          resultCount.textContent = "No sets found – keyword/filters change karo.";
+        } else {
+          resultCount.textContent = `Showing ${visible} hashtag set(s)`;
+        }
+      }
+
+      platformFilter.addEventListener("change", applyFilters);
+      typeFilter.addEventListener("change", applyFilters);
+      keywordSearch.addEventListener("input", applyFilters);
+
+      // QUICK KEYWORD BUTTONS
+      quickKeywordButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const kw = btn.dataset.keyword || "";
+          keywordSearch.value = kw;
+          applyFilters();
+        });
+      });
+
+      // CLEAR / RESET FILTERS
+      if (clearFiltersBtn) {
+        clearFiltersBtn.addEventListener("click", () => {
+          platformFilter.value = "all";
+          typeFilter.value = "all";
+          keywordSearch.value = "";
+          applyFilters();
+        });
+      }
+
+      // Copy buttons
+      document.querySelectorAll(".copy-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const card = btn.closest(".hashtag-card");
+          const textEl = card.querySelector(".hashtags");
+          const text = textEl.innerText.trim();
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(
+              () => {
+                btn.textContent = "Copied ✅";
+                setTimeout(() => (btn.textContent = "Copy hashtags"), 1200);
+              },
+              () => {
+                btn.textContent = "Error ❌";
+                setTimeout(() => (btn.textContent = "Copy hashtags"), 1200);
+              }
+            );
+          } else {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            btn.textContent = "Copied ✅";
+            setTimeout(() => (btn.textContent = "Copy hashtags"), 1200);
+          }
+        });
+      });
+
+      // Year
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+      // Mobile menu
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>R7 Hub • Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ramzan: "#22c55e",
+              r7dark: "#020617",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-r7dark text-slate-100">
+    <!-- NAVBAR -->
+    <header class="border-b border-slate-800 bg-r7dark/80 backdrop-blur sticky top-0 z-40">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-full bg-ramzan/20 flex items-center justify-center text-ramzan font-bold">
+            R7
+          </div>
+          <div>
+            <p class="text-sm font-semibold tracking-tight">Ramzan • R7 Hub</p>
+            <p class="text-[11px] text-slate-400">Blog • Hashtags • Journey</p>
+          </div>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-5 text-sm">
+          <a href="index.html" class="text-ramzan">Home</a>
+          <a href="blog.html" class="hover:text-ramzan transition">Blog</a>
+          <a href="hashtags.html" class="hover:text-ramzan transition">Hashtag Box</a>
+          <a href="about.html" class="hover:text-ramzan transition">About</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuToggle"
+          class="md:hidden rounded-full border border-slate-700 bg-slate-900/70 p-2 text-slate-200"
+          aria-label="Menu"
+        >
+          <!-- 3-line icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav dropdown -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t border-slate-800 bg-r7dark/95 px-4 pb-3 pt-2 text-xs"
+      >
+        <div class="flex flex-col gap-2">
+          <button
+            type="button"
+            onclick="history.back()"
+            class="inline-flex items-center gap-1 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-[11px] text-slate-200"
+          >
+            ⬅ Back
+          </button>
+          <a href="index.html" class="py-1 text-slate-100">🏠 Home</a>
+          <a href="blog.html" class="py-1 text-slate-200">📚 Blog</a>
+          <a href="hashtags.html" class="py-1 text-slate-200">#️⃣ Hashtag Box</a>
+          <a href="about.html" class="py-1 text-slate-200">👤 About</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="border-b border-slate-800 bg-gradient-to-b from-slate-900 via-slate-950 to-r7dark">
+      <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 md:grid-cols-[1.5fr,1.1fr]">
+        <div class="space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs text-slate-400">
+            👋
+            <span class="px-3 py-1 rounded-full border border-ramzan/40 bg-ramzan/10 text-[11px] uppercase tracking-[0.2em] text-ramzan">
+              Welcome to R7 World
+            </span>
+          </p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Student se <span class="text-ramzan">creator + developer</span> banne
+            ki real journey.
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300">
+            Ye ek chhota sa hub hai jaha main (Ramzan) apna blog likhta hoon,
+            hashtags share karta hoon, aur coding / life ka scene document karta hoon.
+            Sab kuch Hinglish me, bilkul real vibe.
+          </p>
+          <div class="flex flex-wrap gap-3 text-xs">
+            <a href="blog.html"
+               class="px-4 py-2 rounded-xl bg-ramzan text-r7dark font-semibold hover:bg-emerald-400 transition">
+              📚 Visit R7 Blog
+            </a>
+            <a href="hashtags.html"
+               class="px-4 py-2 rounded-xl border border-slate-700 hover:border-ramzan hover:text-ramzan transition">
+              #️⃣ Open Hashtag Box
+            </a>
+          </div>
+          <ul class="text-[11px] text-slate-400 space-y-1 pt-2">
+            <li>• Blog: Code, mindset, social media, life lessons</li>
+            <li>• Hashtag Box: Insta / FB / YouTube ke ready-made hashtags</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/70 p-5 text-xs">
+          <p class="text-sm font-semibold">Quick links</p>
+          <div class="space-y-2">
+            <a href="blog.html"
+               class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2 hover:border-ramzan hover:text-ramzan transition">
+              <span>R7 Blog – Articles & notes</span>
+              <span>→</span>
+            </a>
+            <a href="hashtags.html"
+               class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2 hover:border-ramzan hover:text-ramzan transition">
+              <span>Trending Hashtag Box – Copy & use</span>
+              <span>→</span>
+            </a>
+            <a href="about.html"
+               class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2 hover:border-ramzan hover:text-ramzan transition">
+              <span>About • R7 story & contact</span>
+              <span>→</span>
+            </a>
+          </div>
+          <p class="text-[11px] text-slate-400">
+            Future me yaha contact links, social icons, projects ka section bhi aa sakta hai.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTIONS -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-8 text-xs sm:text-sm">
+      <!-- Section 1 -->
+      <section class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-ramzan">R7 Blog</p>
+          <h2 class="text-lg font-semibold">Code • Mindset • Social media</h2>
+          <p class="text-slate-300">
+            Yaha main apne dimaag ka load likh deta hoon – kaise padh raha hoon,
+            kaise code karta hoon, kaise reels soch raha hoon. Koi fake success
+            story nahi, bas real process.
+          </p>
+          <ul class="list-disc pl-4 text-slate-300 space-y-1">
+            <li>HTML, CSS, Tailwind, React, etc.</li>
+            <li>R7 journal, habits, routine, focus</li>
+            <li>Reels ideas, content planning</li>
+          </ul>
+          <a href="blog.html" class="inline-block mt-2 text-ramzan hover:underline">
+            Read blog →
+          </a>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-ramzan">Hashtag Box</p>
+          <h2 class="text-lg font-semibold">Sab platform ke hashtags ek jagah</h2>
+          <p class="text-slate-300">
+            Instagram Reels, Posts, Stories, Facebook posts, YouTube videos /
+            shorts – har cheez ke liye ready-made hashtags. Bas open karo, filter
+            karo, copy karo, paste karo.
+          </p>
+          <ul class="list-disc pl-4 text-slate-300 space-y-1">
+            <li>Coding, love, sad, study, gym, fashion, meme, travel...</li>
+            <li>Platform filter + type filter + search</li>
+          </ul>
+          <a href="hashtags.html" class="inline-block mt-2 text-ramzan hover:underline">
+            Open hashtag tool →
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3">
+        <h2 class="text-lg font-semibold">R7 Mission (short me)</h2>
+        <p class="text-slate-300">
+          Chhote se gaon / sheher se ho, paisa limited hai, lekin dimag me fire
+          hai – to ye site tera dost hai. Yaha se tu idea le sakta hai, system
+          utha sakta hai, aur apna scene bana sakta hai.
+        </p>
+        <ul class="grid gap-3 md:grid-cols-3 text-[12px] text-slate-300">
+          <li class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
+            <p class="font-semibold mb-1">1. Skill</p>
+            <p>Daily thoda code, thoda learn – long term me heavy result.</p>
+          </li>
+          <li class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
+            <p class="font-semibold mb-1">2. Mindset</p>
+            <p>Focus, routine, habits – bina inke koi bhi skill sustain nahi hota.</p>
+          </li>
+          <li class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
+            <p class="font-semibold mb-1">3. Brand</p>
+            <p>Thoda social media, thoda content – log jaanenge tabhi chance milega.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 py-4">
+      <div class="max-w-6xl mx-auto px-4 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>© <span id="year"></span> Ramzan • R7 Hub.</p>
+        <p>
+          Pages:
+          <a href="blog.html" class="text-ramzan">Blog</a> •
+          <a href="hashtags.html" class="text-ramzan">Hashtag Box</a> •
+          <a href="about.html" class="text-ramzan">About</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>
