@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact • R7 Hub – Ramzan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ramzan: "#22c55e",
+              r7dark: "#020617",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-r7dark text-slate-100">
+    
+    <!-- NAVBAR (COMMON) -->
+<header class="sticky top-0 z-40 border-b border-slate-800 bg-r7dark/80 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <!-- Left: Logo + text -->
+    <div class="flex items-center gap-3">
+      <div class="h-9 w-9 rounded-full bg-ramzan/20 flex items-center justify-center text-ramzan font-bold">
+        R7
+      </div>
+      <div>
+        <p class="text-sm font-semibold tracking-tight">Hashtags</p>
+      </div>
+    </div>
+
+     <!-- Desktop nav -->
+<nav class="hidden md:flex items-center gap-4 text-[13px]">
+  <a href="index.html" class="hover:text-ramzan transition">Home</a>
+  <a href="blog.html" class="hover:text-ramzan transition">Blog</a>
+  <a href="index.html#all" class="hover:text-ramzan transition">Hashtag Box</a>
+  <a href="about.html" class="hover:text-ramzan transition">About</a>
+  <a href="contact.html" class="hover:text-ramzan transition">Contact</a>
+  <a href="faq.html" class="hover:text-ramzan transition">FAQ</a>
+  <a href="privacy.html" class="hover:text-ramzan transition">Privacy</a>
+  <a href="terms.html" class="hover:text-ramzan transition">Terms</a>
+  <a href="disclaimer.html" class="hover:text-ramzan transition">Disclaimer</a>
+  <a href="sitemap.html" class="hover:text-ramzan transition">Sitemap</a>
+</nav>
+
+
+    <!-- Mobile menu button -->
+    <button
+      id="menuToggle"
+      class="md:hidden rounded-full border border-slate-700 bg-slate-900/70 p-2 text-slate-200"
+      aria-label="Menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav dropdown -->
+  <div
+    id="mobileMenu"
+    class="md:hidden hidden border-t border-slate-800 bg-r7dark/95 px-4 pb-3 pt-2 text-xs"
+  >
+    <div class="flex flex-col gap-2">
+      <a href="index.html" class="py-1 text-slate-100">🏠 Home</a>
+      <a href="blog.html" class="py-1 text-slate-200">📚 Blog</a>
+      <a href="index.html#all" class="py-1 text-slate-200">#️⃣ Hashtag Box</a>
+      <a href="about.html" class="py-1 text-slate-200">👤 About</a>
+      <a href="contact.html" class="py-1 text-slate-200">📩 Contact</a>
+
+      <div class="h-px bg-slate-800 my-1"></div>
+      <a href="faq.html" class="py-1 text-slate-300">❓ FAQ</a>
+      <a href="privacy.html" class="py-1 text-slate-300">🛡 Privacy Policy</a>
+      <a href="terms.html" class="py-1 text-slate-300">📜 Terms & Conditions</a>
+      <a href="disclaimer.html" class="py-1 text-slate-300">⚠ Disclaimer</a>
+      <a href="sitemap.html" class="py-1 text-slate-300">🗺 Sitemap</a>
+    </div>
+  </div>
+</header>
+
+
+    <!-- MAIN -->
+    <main class="max-w-5xl mx-auto px-4 py-10 text-xs sm:text-sm space-y-10">
+      <section class="grid gap-8 md:grid-cols-[1.4fr,1.1fr]">
+        <div class="space-y-4">
+          <p class="text-[11px] text-ramzan uppercase tracking-[0.25em]">
+            Contact
+          </p>
+          <h1 class="text-2xl sm:text-3xl font-semibold">
+            Contact • R7 Hub
+          </h1>
+          <p class="text-slate-300">
+            Koi idea, feedback, collab thought, ya bas simple "bhai, ye accha
+            laga / ye galat hai" type message – sab welcome hai.
+          </p>
+          <p class="text-slate-400 text-[11px]">
+            Note: Ye front-end only demo form hai. Tum baad me isse Formspree, Netlify Forms
+            ya kisi backend se connect kar sakte ho.
+          </p>
+
+          <form
+            class="space-y-3 mt-3"
+            onsubmit="event.preventDefault(); alert('Demo form hai 🙂\nBackend baad me add kar sakte ho (Formspree / Netlify Forms).');"
+          >
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label class="block mb-1 text-slate-300">Name</label>
+                <input
+                  type="text"
+                  class="w-full rounded-xl bg-slate-950/80 border border-slate-700 px-3 py-2 outline-none focus:border-ramzan"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block mb-1 text-slate-300">Email</label>
+                <input
+                  type="email"
+                  class="w-full rounded-xl bg-slate-950/80 border border-slate-700 px-3 py-2 outline-none focus:border-ramzan"
+                  placeholder="you@example.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block mb-1 text-slate-300">Subject</label>
+              <input
+                type="text"
+                class="w-full rounded-xl bg-slate-950/80 border border-slate-700 px-3 py-2 outline-none focus:border-ramzan"
+                placeholder="Short subject"
+              />
+            </div>
+
+            <div>
+              <label class="block mb-1 text-slate-300">Message</label>
+              <textarea
+                rows="4"
+                class="w-full rounded-xl bg-slate-950/80 border border-slate-700 px-3 py-2 outline-none focus:border-ramzan"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="px-4 py-2 rounded-xl bg-ramzan text-r7dark text-xs font-semibold hover:bg-emerald-400 transition"
+            >
+              Send message (demo)
+            </button>
+          </form>
+        </div>
+
+        <div class="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/70 p-5">
+          <p class="text-sm font-semibold">Direct contact details</p>
+          <div class="space-y-2 text-slate-300">
+            <div class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2 text-[11px] sm:text-xs">
+              <span>📩 Email</span>
+              <a href="mailto:ramzaan0043@gmail.com" class="text-slate-400 hover:text-ramzan">
+                ramzaan0043@gmail.com
+              </a>
+            </div>
+            <div class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2 text-[11px] sm:text-xs">
+              <span>📸 Instagram</span>
+              <a href="https://instagram.com/ramzan0043" target="_blank" class="text-slate-400 hover:text-ramzan">
+                @ramzan0043
+              </a>
+            </div>
+            <div class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2 text-[11px] sm:text-xs">
+              <span>💻 GitHub</span>
+              <a href="https://github.com/ramzan0043" target="_blank" class="text-slate-400 hover:text-ramzan">
+                github.com/ramzan0043
+              </a>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-500">
+            Zyada personal info mat bhejo. Simple text, link, idea, feedback – itna kaafi hai.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+   <footer class="border-t border-slate-800 py-4 mt-6">
+  <div class="max-w-6xl mx-auto px-4 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+    <p>© <span id="year"></span> Ramzan • R7 Hub.</p>
+    <p class="space-x-2">
+      <a href="index.html" class="text-ramzan">Home</a> •
+      <a href="blog.html" class="text-ramzan">Blog</a> •
+      <a href="about.html" class="text-ramzan">About</a> •
+      <a href="privacy.html" class="text-ramzan">Privacy</a> •
+      <a href="terms.html" class="text-ramzan">Terms</a> •
+      <a href="disclaimer.html" class="text-ramzan">Disclaimer</a> •
+      <a href="sitemap.html" class="text-ramzan">Sitemap</a>
+    </p>
+  </div>
+</footer>
+
+
+   <script>
+  // Mobile menu toggle (COMMON)
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Year (agar span id="year" use kar rahe ho to)
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+  </body>
+</html>
