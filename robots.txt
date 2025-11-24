@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ramzan0043.github.io/hashtags/sitemap.xml
+Sitemap: https://hashtagss.netlify.app/sitemap.xml
