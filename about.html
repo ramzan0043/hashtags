@@ -20,66 +20,163 @@
     </script>
   </head>
   <body class="bg-r7dark text-slate-100">
-    <!-- NAVBAR -->
-    <header class="sticky top-0 z-40 border-b border-slate-800 bg-r7dark/80 backdrop-blur">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <!-- NAVBAR (COMMON) -->
+    <header
+      class="sticky top-0 z-40 border-b border-slate-800 bg-r7dark/80 backdrop-blur"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4"
+      >
+        <!-- Left: Logo + text -->
         <div class="flex items-center gap-3">
-          <div class="h-9 w-9 rounded-full bg-ramzan/20 flex items-center justify-center text-ramzan font-bold">
+          <div
+            class="h-9 w-9 rounded-full bg-ramzan/20 flex items-center justify-center text-ramzan font-bold"
+          >
             R7
           </div>
           <div>
-            <p class="text-sm font-semibold tracking-tight">R7 Hub • About</p>
-            <p class="text-[11px] text-slate-400">Ramzan Ahmad • THE R7</p>
+            <p class="text-sm font-semibold tracking-tight">Hashtags</p>
           </div>
         </div>
 
-        <nav class="hidden md:flex items-center gap-5 text-sm">
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-4 text-[13px]">
           <a href="index.html" class="hover:text-ramzan transition">Home</a>
           <a href="blog.html" class="hover:text-ramzan transition">Blog</a>
-          <a href="hashtags.html" class="hover:text-ramzan transition">Hashtag Box</a>
-          <a href="about.html" class="text-ramzan">About</a>
+          <a href="index.html#all" class="hover:text-ramzan transition"
+            >Hashtag Box</a
+          >
+          <a href="about.html" class="hover:text-ramzan transition">About</a>
+          <a href="contact.html" class="hover:text-ramzan transition"
+            >Contact</a
+          >
+          <a href="faq.html" class="hover:text-ramzan transition">FAQ</a>
+          <a href="privacy.html" class="hover:text-ramzan transition"
+            >Privacy</a
+          >
+          <a href="terms.html" class="hover:text-ramzan transition">Terms</a>
+          <a href="disclaimer.html" class="hover:text-ramzan transition"
+            >Disclaimer</a
+          >
+          <a href="sitemap.html" class="hover:text-ramzan transition"
+            >Sitemap</a
+          >
         </nav>
 
-        <div class="md:hidden text-[11px] text-slate-400">R7 • About</div>
+        <!-- Mobile menu button -->
+        <button
+          id="menuToggle"
+          class="md:hidden rounded-full border border-slate-700 bg-slate-900/70 p-2 text-slate-200"
+          aria-label="Menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav dropdown -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t border-slate-800 bg-r7dark/95 px-4 pb-3 pt-2 text-xs"
+      >
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="py-1 text-slate-100">🏠 Home</a>
+          <a href="blog.html" class="py-1 text-slate-200">📚 Blog</a>
+          <a href="index.html#all" class="py-1 text-slate-200">#️⃣ Hashtag Box</a>
+          <a href="about.html" class="py-1 text-slate-200">👤 About</a>
+          <a href="contact.html" class="py-1 text-slate-200">📩 Contact</a>
+
+          <div class="h-px bg-slate-800 my-1"></div>
+          <a href="faq.html" class="py-1 text-slate-300">❓ FAQ</a>
+          <a href="privacy.html" class="py-1 text-slate-300">🛡 Privacy Policy</a>
+          <a href="terms.html" class="py-1 text-slate-300"
+            >📜 Terms &amp; Conditions</a
+          >
+          <a href="disclaimer.html" class="py-1 text-slate-300">⚠ Disclaimer</a>
+          <a href="sitemap.html" class="py-1 text-slate-300">🗺 Sitemap</a>
+        </div>
       </div>
     </header>
 
     <!-- HERO -->
-    <section class="border-b border-slate-800 bg-gradient-to-b from-slate-900/60 to-r7dark">
-      <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 md:grid-cols-[1.3fr,1.1fr]">
+    <section
+      class="border-b border-slate-800 bg-gradient-to-b from-slate-900/60 to-r7dark"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-10 grid gap-8 md:grid-cols-[1.3fr,1.1fr]"
+      >
         <div class="space-y-4">
-          <p class="text-xs text-ramzan uppercase tracking-[0.3em]">About</p>
+          <p
+            class="text-xs text-ramzan uppercase tracking-[0.3em]"
+          >
+            About
+          </p>
           <h1 class="text-3xl sm:text-4xl font-bold leading-tight">
-            Main kaun hoon? Aur ye <span class="text-ramzan">TheR7 Hub</span> kyun banaya?
+            Main kaun hoon? Aur ye
+            <span class="text-ramzan">TheR7 Hub</span> kyun banaya?
           </h1>
           <p class="text-sm sm:text-base text-slate-300">
-            Mera naam <span class="text-ramzan font-semibold">Ramzan Ahmad</span> hai.
-            BCA student, React Native learner, chhote se area se, bade goals ke saath.
-            R7 Hub mera digital ghar hai – jaha blog, hashtags, aur journey sab ek jagah hai.
+            Mera naam
+            <span class="text-ramzan font-semibold">Ramzan Ahmad</span> hai.
+            BCA student, React Native learner, chhote se area se, bade goals ke
+            saath. R7 Hub mera digital ghar hai – jaha blog, hashtags, aur
+            journey sab ek jagah hai.
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-5 text-xs space-y-3">
-          <p class="text-sm font-semibold">Fast facts</p>
-          <ul class="space-y-1 text-slate-300">
-            <li>• 👨‍🎓 BCA student + self-taught developer</li>
-            <li>• 💻 Interest: React Native, AI, full stack</li>
-            <li>• 🎯 Goal: Online earning through skills</li>
-            <li>• 📍 India • Small town / village vibes</li>
-          </ul>
-          <p class="text-[11px] text-slate-500">
-            Jo cheeze main khud seekh raha hoon, wohi simple words me likh raha hoon –
-            taaki koi aur student bhi use use kar sake.
-          </p>
+        <!-- PROFILE + FAST FACTS CARD -->
+       <div
+  class="rounded-3xl border border-slate-800 bg-slate-900/70 p-5 text-xs 
+         flex flex-row-reverse items-center gap-4"
+>
+  <!-- Right: Profile image -->
+  <div class="flex-shrink-0 flex justify-center">
+    <img
+      src="ramzan ahmad.jpeg"
+      alt="Ramzan Ahmad – creator of TheR7 Hub"
+      class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-ramzan shadow-lg shadow-emerald-500/20"
+    />
+  </div>
+
+  <!-- Left: Fast facts -->
+  <div class="space-y-3">
+    <p class="text-sm font-semibold">Fast facts</p>
+    <ul class="space-y-1 text-slate-300">
+      <li>• 👨‍🎓 BCA student + self-taught developer</li>
+      <li>• 💻 Interest: React Native, AI, full stack</li>
+      <li>• 🎯 Goal: skills se online earning</li>
+      <li>• 📍 India • Small town / village vibes</li>
+    </ul>
+    <p class="text-[11px] text-slate-500">
+      Jo cheeze main khud seekh raha hoon, wohi simple words me share karta
+      hoon – taaki students ko help mile.
+    </p>
+  </div>
         </div>
       </div>
     </section>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-6xl mx-auto px-4 py-10 space-y-10 text-xs sm:text-sm">
+    <main
+      class="max-w-6xl mx-auto px-4 py-10 space-y-10 text-xs sm:text-sm"
+    >
       <!-- Section: Story -->
       <section class="grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3">
+        <div
+          class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3"
+        >
           <h2 class="text-lg font-semibold">Meri story short me</h2>
           <p class="text-slate-300">
             Normal background, normal life – lekin dimaag me hamesha ye tha ki
@@ -87,9 +184,9 @@
             to maza bhi aaya aur frustration bhi 😄.
           </p>
           <p class="text-slate-300">
-            Kabhi din bhar YouTube tutorials dekhna, kabhi ek chhota layout banne me
-            bhi 3–4 ghante lag jana. Same time par personal life, breakup, social
-            media, confidence – sab mix chal raha tha.
+            Kabhi din bhar YouTube tutorials dekhna, kabhi ek chhota layout
+            banne me bhi 3–4 ghante lag jana. Same time par personal life,
+            breakup, social media, confidence – sab mix chal raha tha.
           </p>
           <p class="text-slate-300">
             Isi process ko main R7 Blog me likh raha hoon – taaki future me dekh
@@ -98,7 +195,9 @@
           </p>
         </div>
 
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3">
+        <div
+          class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3"
+        >
           <h2 class="text-lg font-semibold">R7 name ka scene kya hai?</h2>
           <p class="text-slate-300">
             R7 basically mera ek internal “mode” ka naam hai – jab serious me
@@ -117,23 +216,41 @@
       </section>
 
       <!-- Section: What is on this site -->
-      <section class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-4">
+      <section
+        class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-4"
+      >
         <h2 class="text-lg font-semibold">R7 Hub me kya-kya milega?</h2>
         <div class="grid gap-4 md:grid-cols-3 text-slate-300">
-          <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-4 space-y-1">
+          <div
+            class="rounded-xl bg-slate-950/60 border border-slate-800 p-4 space-y-1"
+          >
             <p class="font-semibold text-sm">📚 R7 Blog</p>
             <p>Code, mindset, social media, personal life learnings – sab mix.</p>
-            <a href="blog.html" class="text-ramzan text-[11px] hover:underline">Open blog →</a>
+            <a
+              href="blog.html"
+              class="text-ramzan text-[11px] hover:underline"
+              >Open blog →</a
+            >
           </div>
-          <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-4 space-y-1">
+          <div
+            class="rounded-xl bg-slate-950/60 border border-slate-800 p-4 space-y-1"
+          >
             <p class="font-semibold text-sm">#️⃣ Hashtag Box</p>
             <p>Instagram, Facebook, YouTube ke liye ready-made hashtag sets.</p>
-            <a href="hashtags.html" class="text-ramzan text-[11px] hover:underline">Open hashtag tool →</a>
+            <a
+              href="hashtags.html"
+              class="text-ramzan text-[11px] hover:underline"
+              >Open hashtag tool →</a
+            >
           </div>
-          <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-4 space-y-1">
+          <div
+            class="rounded-xl bg-slate-950/60 border border-slate-800 p-4 space-y-1"
+          >
             <p class="font-semibold text-sm">🚀 Future Plans</p>
             <p>Projects, free resources, maybe templates, Notion pages, etc.</p>
-            <span class="text-[11px] text-slate-500">Slowly-slowly add hoga.</span>
+            <span class="text-[11px] text-slate-500"
+              >Slowly-slowly add hoga.</span
+            >
           </div>
         </div>
       </section>
@@ -141,13 +258,18 @@
       <!-- CONTACT / FAKE FORM -->
       <section class="grid gap-6 md:grid-cols-[1.2fr,1.1fr]">
         <!-- Contact form (front-end only) -->
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3">
+        <div
+          class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3"
+        >
           <h2 class="text-lg font-semibold">Contact / DM style form</h2>
           <p class="text-slate-300 text-xs sm:text-sm">
             Ye demo form hai – abhi backend nahi hai. Tu chahe to baad me isko
             real email service se connect kar sakta hai (Formspree, etc).
           </p>
-          <form class="space-y-3 text-xs sm:text-sm" onsubmit="event.preventDefault(); alert('Demo form hai 🙂 Backend baad me add kar sakte ho.');">
+          <form
+            class="space-y-3 text-xs sm:text-sm"
+            onsubmit="event.preventDefault(); alert('Demo form hai 🙂 Backend baad me add kar sakte ho.');"
+          >
             <div class="grid gap-3 sm:grid-cols-2">
               <div>
                 <label class="block mb-1 text-slate-300">Name</label>
@@ -184,56 +306,99 @@
         </div>
 
         <!-- Social handles -->
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3 text-xs sm:text-sm">
+        <div
+          class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 space-y-3 text-xs sm:text-sm"
+        >
           <h2 class="text-lg font-semibold">Social links</h2>
           <p class="text-slate-300">
             Yaha mere real links hain – yahi se directly connect ho sakte ho:
           </p>
           <div class="space-y-2">
-            <div class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2">
+            <div
+              class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2"
+            >
               <span>Instagram</span>
-              <a href="https://instagram.com/ramzan0043" target="_blank" class="text-slate-400 text-[11px] hover:text-ramzan">
+              <a
+                href="https://instagram.com/ramzan0043"
+                target="_blank"
+                class="text-slate-400 text-[11px] hover:text-ramzan"
+              >
                 @ramzan0043
               </a>
             </div>
-            <div class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2">
+            <div
+              class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2"
+            >
               <span>YouTube</span>
-              <span class="text-slate-400 text-[11px]">youtube.com/@yourchannel</span>
+              <span class="text-slate-400 text-[11px]"
+                >youtube.com/@yourchannel</span
+              >
             </div>
-            <div class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2">
+            <div
+              class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2"
+            >
               <span>GitHub</span>
-              <a href="https://github.com/ramzan0043" target="_blank" class="text-slate-400 text-[11px] hover:text-ramzan">
+              <a
+                href="https://github.com/ramzan0043"
+                target="_blank"
+                class="text-slate-400 text-[11px] hover:text-ramzan"
+              >
                 github.com/ramzan0043
               </a>
             </div>
-            <div class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2">
+            <div
+              class="flex items-center justify-between rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2"
+            >
               <span>Email</span>
-              <a href="mailto:ramzaan0043@gmail.com" class="text-slate-400 text-[11px] hover:text-ramzan">
+              <a
+                href="mailto:ramzaan0043@gmail.com"
+                class="text-slate-400 text-[11px] hover:text-ramzan"
+              >
                 ramzaan0043@gmail.com
               </a>
             </div>
           </div>
           <p class="text-[11px] text-slate-500">
-            Ye page basically mera digital visiting card hai – simple, clean, R7 style.
+            Ye page basically mera digital visiting card hai – simple, clean, R7
+            style.
           </p>
         </div>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-slate-800 py-4">
-      <div class="max-w-6xl mx-auto px-4 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+    <footer class="border-t border-slate-800 py-4 mt-6">
+      <div
+        class="max-w-6xl mx-auto px-4 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2"
+      >
         <p>© <span id="year"></span> Ramzan • R7 Hub.</p>
-        <p>
+        <p class="space-x-2">
           <a href="index.html" class="text-ramzan">Home</a> •
           <a href="blog.html" class="text-ramzan">Blog</a> •
-          <a href="hashtags.html" class="text-ramzan">Hashtag Box</a>
+          <a href="about.html" class="text-ramzan">About</a> •
+          <a href="privacy.html" class="text-ramzan">Privacy</a> •
+          <a href="terms.html" class="text-ramzan">Terms</a> •
+          <a href="disclaimer.html" class="text-ramzan">Disclaimer</a> •
+          <a href="sitemap.html" class="text-ramzan">Sitemap</a>
         </p>
       </div>
     </footer>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      // Mobile menu toggle (COMMON)
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Year
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
     </script>
   </body>
 </html>
