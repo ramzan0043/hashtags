@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FAQ • R7 Hub – Questions & Answers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ramzan: "#22c55e",
+              r7dark: "#020617",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-r7dark text-slate-100">
+    
+    <!-- NAVBAR (COMMON) -->
+<header class="sticky top-0 z-40 border-b border-slate-800 bg-r7dark/80 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <!-- Left: Logo + text -->
+    <div class="flex items-center gap-3">
+      <div class="h-9 w-9 rounded-full bg-ramzan/20 flex items-center justify-center text-ramzan font-bold">
+        R7
+      </div>
+      <div>
+        <p class="text-sm font-semibold tracking-tight">Hashtags</p>
+       
+      </div>
+    </div>
+
+     <!-- Desktop nav -->
+<nav class="hidden md:flex items-center gap-4 text-[13px]">
+  <a href="index.html" class="hover:text-ramzan transition">Home</a>
+  <a href="blog.html" class="hover:text-ramzan transition">Blog</a>
+  <a href="index.html#all" class="hover:text-ramzan transition">Hashtag Box</a>
+  <a href="about.html" class="hover:text-ramzan transition">About</a>
+  <a href="contact.html" class="hover:text-ramzan transition">Contact</a>
+  <a href="faq.html" class="hover:text-ramzan transition">FAQ</a>
+  <a href="privacy.html" class="hover:text-ramzan transition">Privacy</a>
+  <a href="terms.html" class="hover:text-ramzan transition">Terms</a>
+  <a href="disclaimer.html" class="hover:text-ramzan transition">Disclaimer</a>
+  <a href="sitemap.html" class="hover:text-ramzan transition">Sitemap</a>
+</nav>
+
+
+    <!-- Mobile menu button -->
+    <button
+      id="menuToggle"
+      class="md:hidden rounded-full border border-slate-700 bg-slate-900/70 p-2 text-slate-200"
+      aria-label="Menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav dropdown -->
+  <div
+    id="mobileMenu"
+    class="md:hidden hidden border-t border-slate-800 bg-r7dark/95 px-4 pb-3 pt-2 text-xs"
+  >
+    <div class="flex flex-col gap-2">
+      <a href="index.html" class="py-1 text-slate-100">🏠 Home</a>
+      <a href="blog.html" class="py-1 text-slate-200">📚 Blog</a>
+      <a href="index.html#all" class="py-1 text-slate-200">#️⃣ Hashtag Box</a>
+      <a href="about.html" class="py-1 text-slate-200">👤 About</a>
+      <a href="contact.html" class="py-1 text-slate-200">📩 Contact</a>
+
+      <div class="h-px bg-slate-800 my-1"></div>
+      <a href="faq.html" class="py-1 text-slate-300">❓ FAQ</a>
+      <a href="privacy.html" class="py-1 text-slate-300">🛡 Privacy Policy</a>
+      <a href="terms.html" class="py-1 text-slate-300">📜 Terms & Conditions</a>
+      <a href="disclaimer.html" class="py-1 text-slate-300">⚠ Disclaimer</a>
+      <a href="sitemap.html" class="py-1 text-slate-300">🗺 Sitemap</a>
+    </div>
+  </div>
+</header>
+
+
+    <!-- MAIN -->
+    <main class="max-w-4xl mx-auto px-4 py-10 text-xs sm:text-sm space-y-8">
+      <header class="space-y-2 border-b border-slate-800 pb-4">
+        <p class="text-[11px] text-ramzan uppercase tracking-[0.25em]">
+          FAQ
+        </p>
+        <h1 class="text-2xl sm:text-3xl font-semibold">
+          Frequently Asked Questions – R7 Hub
+        </h1>
+        <p class="text-slate-400 text-[11px]">
+          Simple questions jo kisi bhi new visitor ko aa sakte hain.
+        </p>
+      </header>
+
+      <section class="space-y-4">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold">
+            1. Ye website kis cheez ke liye hai?
+          </h2>
+          <p class="text-slate-300">
+            Ye ek personal hub hai jaha main (Ramzan) apna blog, hashtag box,
+            aur learning journey public rakh raha hoon. Student + creator +
+            developer mix ka scene hai.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold">
+            2. Hashtag Box free hai ya paid?
+          </h2>
+          <p class="text-slate-300">
+            Abhi jo hashtag sets hai, woh sab completely free hai. Tum directly
+            copy karke apne Instagram, Facebook, YouTube content me use kar sakte ho.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold">
+            3. Kya main tumse personally help / collab ke liye contact kar sakta hoon?
+          </h2>
+          <p class="text-slate-300">
+            Haan, basic collab / questions ke liye tum Instagram ya email se
+            reach out kar sakte ho. Har message ka reply zaroor milega ye
+            promise nahi hai, lekin try karunga.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold">
+            4. Kya ye website official course / coaching hai?
+          </h2>
+          <p class="text-slate-300">
+            Nahi. Ye koi official coaching, institute ya company ka site nahi hai.
+            Bas ek individual creator ka space hai jo apni life & learning ko
+            public me document kar raha hai.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold">
+            5. Agar mujhe koi galti dikhe to kya karun?
+          </h2>
+          <p class="text-slate-300">
+            Screenshot lo, ya simple message ke through bata do (Insta / email).
+            Main happy ho kar fix karunga – ye hi learning ka part hai.
+          </p>
+        </div>
+
+        <p class="text-[11px] text-slate-500">
+          Aur question hai? <a href="contact.html" class="text-ramzan underline">Contact page</a> se message drop kar sakte ho.
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 py-4 mt-6">
+  <div class="max-w-6xl mx-auto px-4 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+    <p>© <span id="year"></span> Ramzan • R7 Hub.</p>
+    <p class="space-x-2">
+      <a href="index.html" class="text-ramzan">Home</a> •
+      <a href="blog.html" class="text-ramzan">Blog</a> •
+      <a href="about.html" class="text-ramzan">About</a> •
+      <a href="privacy.html" class="text-ramzan">Privacy</a> •
+      <a href="terms.html" class="text-ramzan">Terms</a> •
+      <a href="disclaimer.html" class="text-ramzan">Disclaimer</a> •
+      <a href="sitemap.html" class="text-ramzan">Sitemap</a>
+    </p>
+  </div>
+</footer>
+
+
+ <script>
+  // Mobile menu toggle (COMMON)
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Year (agar span id="year" use kar rahe ho to)
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+  </body>
+</html>
